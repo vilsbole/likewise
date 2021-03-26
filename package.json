@@ -20,7 +20,10 @@
     "gatsby-plugin-theme-ui": "^0.6.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "theme-ui": "^0.6.0"
+    "react-spring": "v8.0",
+    "react-use": "^17.2.1",
+    "theme-ui": "^0.6.0",
+    "toasted-notes": "^3.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
