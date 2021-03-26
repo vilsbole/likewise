@@ -3,7 +3,7 @@ import { useCopyToClipboard } from 'react-use'
 import toast from 'toasted-notes'
 import 'toasted-notes/src/styles.css'
 
-import { Layout, Box } from '../components'
+import { Layout, Box, Logo } from '../components'
 
 export default function Home() {
   const [, copyToClipboard] = useCopyToClipboard()
@@ -32,20 +32,8 @@ export default function Home() {
 
   return (
     <Layout>
-      <Box>
-        <Box
-          variant="textStyles.heading"
-          sx={{
-            fontSize: [6, 7],
-            fontFamily: 'Times new roman',
-            color: '#ffebd6',
-          }}
-        >
-          Likewise Invest
-        </Box>
-        <p style={{ marginTop: 0, textAlign: 'center' }}>
-          The solution to debtor insolvency
-        </p>
+      <Box padding={['1em', '0']}>
+        <Logo />
       </Box>
       <Box mt="2em" sx={{ textAlign: 'center' }}>
         <span>
