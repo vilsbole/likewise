@@ -15,6 +15,7 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
-    "gatsby-plugin-eslint",
+    'gatsby-plugin-eslint',
+    'gatsby-plugin-theme-ui',
   ],
 }
