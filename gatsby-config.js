@@ -16,6 +16,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-eslint',
-    'gatsby-plugin-theme-ui',
+    {
+      resolve: 'gatsby-plugin-theme-ui',
+      options: {
+        preset: require('./src/theme.ts'),
+      },
+    },
   ],
 }
