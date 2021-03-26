@@ -51,7 +51,8 @@ export default function Home() {
         <span>
           Our online service is coming soon. <br />
           If you‘re impatient, you can reach us at
-        </span>{' '}
+        </span>
+        <br />
         <span onClick={handleClick}>
           <Box
             sx={{
