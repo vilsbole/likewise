@@ -8,6 +8,9 @@
   "env": {
     "node": true // defines things like process.env when generating through node
   },
+  "rules": {
+    "react/prop-types": 0 // we use TS for prop validation
+  },
   "extends": [
     "eslint:recommended", // use recommended configs
     "plugin:react/recommended"
