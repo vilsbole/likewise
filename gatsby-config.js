@@ -7,6 +7,7 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    'gatsby-plugin-eslint',
     {
       resolve: `gatsby-plugin-typescript`,
       options: {
@@ -15,11 +16,23 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
-    'gatsby-plugin-eslint',
     {
       resolve: 'gatsby-plugin-theme-ui',
       options: {
         preset: require('./src/theme.ts'),
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: `Likewise Invest`,
+        short_name: `Likewise`,
+        description: `The solution to debtor insolvancy`,
+        lang: `en`,
+        display: `standalone`,
+        icon: `static/favicon.png`,
+        start_url: `/`,
+        background_color: `#008c5a`,
       },
     },
   ],

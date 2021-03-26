@@ -12,25 +12,61 @@ export default function Home() {
   const emailReversed = `ta.esiwekil@eciffo`
   const handleClick = () => {
     copyToClipboard(email)
-    toast.notify(`${email} copied to clipboard`, {
-      position: 'bottom',
-    })
+    toast.notify(
+      () => {
+        return (
+          <Box
+            sx={{
+              backgroundColor: '#e197a6',
+              padding: '1.5em',
+              borderRadius: '3px',
+            }}
+          >{`${email} copied to clipboard`}</Box>
+        )
+      },
+      {
+        position: 'bottom',
+      }
+    )
   }
 
   return (
     <Layout>
-      <h1>Likewise Invest</h1>
-      <a href="#" onClick={handleClick}>
+      <Box>
         <Box
+          variant="textStyles.heading"
           sx={{
-            display: 'inline',
-            unicodeBidi: 'bidi-override',
-            direction: 'rtl',
+            fontSize: [6, 7],
+            fontFamily: 'Times new roman',
+            color: '#ffebd6',
           }}
         >
-          {emailReversed}
+          Likewise Invest
         </Box>
-      </a>
+        <p style={{ marginTop: 0, textAlign: 'center' }}>
+          The solution to debtor insolvency
+        </p>
+      </Box>
+      <Box mt="2em" sx={{ textAlign: 'center' }}>
+        <span>
+          Our online service is coming soon. <br />
+          If you‘re impatient, you can reach us at
+        </span>{' '}
+        <span onClick={handleClick}>
+          <Box
+            sx={{
+              cursor: 'pointer',
+              color: '#ffebd6',
+              display: 'inline',
+              unicodeBidi: 'bidi-override',
+              direction: 'rtl',
+            }}
+          >
+            {emailReversed}
+          </Box>
+        </span>
+        <br />
+      </Box>
       {/* <p>&#128679; under construction</p> */}
     </Layout>
   )
