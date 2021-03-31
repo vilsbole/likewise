@@ -31,32 +31,33 @@ export default function Home() {
   }
 
   return (
-    <Layout>
-      <Box padding={['1em', '0']}>
-        <Logo />
-      </Box>
-      <Box mt="2em" sx={{ textAlign: 'center' }}>
-        <span>
-          Our online service is coming soon. <br />
-          If you‘re impatient, you can reach us at
-        </span>
-        <br />
-        <span onClick={handleClick}>
-          <Box
-            sx={{
-              cursor: 'pointer',
-              color: '#ffebd6',
-              display: 'inline',
-              unicodeBidi: 'bidi-override',
-              direction: 'rtl',
-            }}
-          >
-            {emailReversed}
-          </Box>
-        </span>
-        <br />
-      </Box>
-      {/* <p>&#128679; under construction</p> */}
-    </Layout>
+    <>
+      <Layout>
+        <Box padding={['1em', '0']}>
+          <Logo />
+        </Box>
+        <Box mt="2em" mb="4em" sx={{ textAlign: 'center' }}>
+          <span>
+            Our online service is coming soon. <br />
+            If you‘re impatient, you can reach us at
+          </span>
+          <br />
+          <span onClick={handleClick}>
+            <Box
+              sx={{
+                cursor: 'pointer',
+                color: '#ffebd6',
+                display: 'inline',
+                unicodeBidi: 'bidi-override',
+                direction: 'rtl',
+              }}
+            >
+              {emailReversed}
+            </Box>
+          </span>
+          <br />
+        </Box>
+      </Layout>
+    </>
   )
 }
